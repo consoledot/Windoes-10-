@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.top{
+    background: url('./assets/62713_simple_girl_dark_background.jpg');
+    height: 95vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.start{ 
+    display: none;
+    /* transform: translateY(10%); */
+   
+}
+@keyframes show{
+    0%{
+         opacity: 0;
+         transform: translateY(5%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+       
+    } 
+}
+.show{
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 5vh;
+    background-color: rgb(36, 36, 36);
+    z-index: 10;
+    color: white; 
+    animation:show 0.4s;
+    height: 90vh;
+}
+.task-bar{
+    width: 100vw;
+    background-color: rgb(36, 36, 36);
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    color:white;
+}
+.left, .right{ 
+    display: flex;
+}
+.right .time{
+    display: flex;
+    align-items: center;
+}
+.browser{
+    color: royalblue;
+}
+.fa-folder{
+    color: rgb(244, 205, 96);
+}
+.task-bar .fa{
+    padding: 8px 10px;
+    transition: all 0.8s  ease;
+}
+.task-bar .fa:hover{
+    background-color: rgb(124, 123, 123);
+    
+}
+.fa-windows:hover{
+    color: rgb(36, 36, 36);
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 100%;
+    
+} 
+.bottom-buttons{
+    display: flex;
+    flex-direction: column;
+}
+.icon-start{
+    padding: 15px;
+    transition: all 0.8s  ease;
+}
+.icon-start:hover{
+    background-color: rgb(124, 123, 123);
+}
+.start-show{
+    background-color: rgb(124, 123, 123);
+}
+.programs{
+    width: 200px;
+    margin-left: 20px;
+    margin-top: 15px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.programs .fa{
+    margin-right: 10px;
+}
+.programs p{
+    padding: 10px;
+}
+.programs p:hover{
+    background-color: rgb(124, 123, 123);
+    transition: all 0.8s  ease;
+}
+.tiles{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    margin: 15px;
+    grid-template-rows: repeat(auto-fit, 115px);
+}
+.card{
+    box-sizing: inherit;
+    /* height: 115px; */
+    transition: all 0.8s  ease;
+}
+.card:hover, .card-2x:hover{
+    border: 0.4px solid white;
+}
+.card i{
+     padding:40px; 
+}
+.card-text{ 
+    font-size: 0.8rem;
+    margin: -17px 0 10px 5px;
+}
+.blue{
+    background-color: royalblue;
+}
+.red{
+    background-color: rgb(228, 56, 50);
+}
+.green{
+    background-color: rgb(9, 184, 9);
+}
+.default-color{
+    background-color: rgb(124, 123, 123);
+}
+.card-2x{
+    background: url('./assets/62713_simple_girl_dark_background.jpg');
+    background-position: center;
+    background-size: cover;
+    grid-row: 2/4;
+    grid-column: 2/4;
+}
+.photo{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90%;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.youtube{
+    grid-column: 2/3;
+}
